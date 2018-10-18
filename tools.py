@@ -63,11 +63,12 @@ def show_card():
 
     for card_dict in cards_list:
         print("%s\t\t\t%s\t\t\t%s\t\t\t%s" % (card_dict["name"],
-                                        card_dict["phone"],
-                                        card_dict["QQ"],
-                                        card_dict["Email"]))
+                                              card_dict["phone"],
+                                              card_dict["QQ"],
+                                              card_dict["Email"]))
 
-#查询
+
+# 查询
 def search_card():
 
     """查询名片"""
@@ -90,18 +91,20 @@ def search_card():
             deal_card(card_dict)
 
 
-            #找到后退出循环
+            # 找到后退出循环
             break
     else:
         print("没找到%s" % find_name)
 
-#修改删除
+
+# 修改删除
 def deal_card(find_dict):
+
     """处理查找到的名片 修改删除
 
     :param find_dict: 查找到的名片
     """
-    #print(find_dict)
+    # print(find_dict)
     action_str = input("请选择要执行的操作："
                        "[1]修改  [2]删除  [0]返回  ")
     if action_str == "1":
@@ -129,10 +132,10 @@ def input_card_info(dict_value, tip_message):
     :param tip_message:输入提示
     :return:返回修改值，若为空返回原有值
     """
-    #1.提示用户输入
+    # 1.提示用户输入
     result_str = input(tip_message)
 
-    #2.判断是否有输入，有！将内容返回
+    # 2.判断是否有输入，有！将内容返回
     if result_str > "0":
         return result_str
 
